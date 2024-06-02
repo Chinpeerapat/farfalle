@@ -1,8 +1,8 @@
 services:
   - type: web
-    name: farfalle
+    name: deepseek
     runtime: python
-    repo: https://github.com/rashadphz/farfalle
+    repo: https://github.com/chinpprapat/farfalle
     plan: free
     envVars:
       - key: TAVILY_API_KEY
