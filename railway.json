@@ -1,15 +1,15 @@
 {
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
-    "builder": "DOCKERFILE",
+    "provider": "python",
     "buildCommand": "poetry install",
-    "dockerfilePath": "src/backend/Dockerfile"
+    "dockerfilePath": "./src/backend/"
   },
   "deploy": {
     "numReplicas": 1,
     "startCommand": "uvicorn main:app --host 0.0.0.0 --port $PORT",
     "sleepApplication": false,
     "restartPolicyType": "ON_FAILURE",
-    "restartPolicyMaxRetries": 10
+    "restartPolicyMaxRetries": 1
   }
 }
