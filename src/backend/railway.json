@@ -1,10 +1,10 @@
 {
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
-    "provider": "python",
-    "buildCommand": "poetry install",
-    "dockerfilePath": "./src/backend/"
+    "builder": "NIXPACKS",
+    "buildCommand": "poetry install"
   },
+  
   "deploy": {
     "numReplicas": 1,
     "startCommand": "uvicorn main:app --host 0.0.0.0 --port $PORT",
